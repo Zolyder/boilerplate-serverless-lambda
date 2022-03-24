@@ -1,0 +1,8 @@
+xml:
+  handler: xml/index.handler
+  memorySize: 128
+  timeout: 5
+  events:
+    - httpApi:
+        path: ${self:custom.xmlConvertionApiPrefix}/xml
+        method: post

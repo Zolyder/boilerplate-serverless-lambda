@@ -1,0 +1,31 @@
+{
+  "name": "pre-signed-upload",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "sls offline start",
+    "test": "npx jest",
+    "lint": "eslint . --fix --cache",
+    "prettify": "prettier --write --ignore-path .gitignore '**/*.{css,html,js,json,md,yaml,yml}'"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "aws-sdk": "^2.448.0",
+    "eslint": "^5.12.1",
+    "eslint-config-maasglobal": "^2.0.6",
+    "eslint-plugin-import": "^2.15.0",
+    "jest": "^24.7.1",
+    "prettier": "^1.16.1",
+    "serverless-offline": "^8.5.0"
+  },
+  "dependencies": {
+    "fast-xml-parser": "^4.0.7"
+  },
+  "jest": {
+    "coverageDirectory": "./coverage/",
+    "collectCoverage": true,
+    "testEnvironment": "node"
+  }
+}

@@ -1,0 +1,2 @@
+#  lambdas
+- "${file(./xml/xml.serverless.yml)}"

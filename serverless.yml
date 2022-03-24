@@ -1,0 +1,19 @@
+service: serverless-template
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  region: us-east-1
+  stage: ${opt:stage,'dev'}
+  lambdaHashingVersion: 20200924
+
+functions:
+    # Archivo de configuración
+  "${file(all.api.serverless.yml)}"
+
+plugins:
+  - serverless-offline
+
+custom:
+  stage: ${opt:stage, self:provider.stage}
+  xmlConvertionApiPrefix: '/api'
